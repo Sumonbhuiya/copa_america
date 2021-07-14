@@ -1,9 +1,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+/* Body Style  */
 body{
     font-family: 'Poppins', sans-serif;
     margin: 0;
     font-weight: bold;
+    width: 100%;
 }
 main{
     display: flex;
@@ -14,7 +16,6 @@ main{
 .container{
     background: #FFFFFF;
     padding: 70px;
-    margin-bottom: 50px;
 }
 /* Heading Postar Deasin */
 .header{
@@ -80,6 +81,131 @@ main{
     margin-top: 0;
 }
 /* players Description style End */
+/* portfolio area design */
+.portfolio-area{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+	width:80%;
+	background:#ffdd99;
+	padding:60px 0;
+    margin-bottom: 30px;
+}
+.middle-area > h2{
+	font-size:40px;
+	color:#393939;
+	margin:0;
+	padding-top:15px;
+	text-align:center;	
+}
+.middle-area > p{
+	font-size:18px;
+	color:#393939;
+	margin:auto;	
+	width:50%;
+	text-align:center;
+	padding:10px 0;
+}
+.portfolio-menu ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+	text-align:center;
+	margin-top:25px;
+}
+.portfolio-menu ul{
+	display: flex;
+    justify-content: center;
+}
+.portfolio-menu ul li a{
+	padding:5px 20px;
+	color:#393939;
+	background:#ebc985;
+	font-size:18px;
+	border-radius:5px;
+    text-decoration: none;
+	margin-left:10px;
+}
+.portfolio-menu ul li a:hover{
+	background:#ffff;
+}
+/* Contact area  */
+.contact-area{
+	background:#3c5499;
+	padding:60px 0;
+	width:80%;
+    margin-bottom: 50px;
+}
+.contact-area > h2{
+	font-size:40px;
+	color:#ffffff;
+	margin:0;
+	text-align:center;	
+}
+.contact-area > p{
+	font-size:18px;
+	color:#ffffff;
+	margin:auto;	
+	text-align:center;
+	padding:10px 0;
+	word-spacing:1px;
+}
+.contact-boxes{
+	width:80%;
+	margin:auto;
+}
+.username input{
+	font-size:18px;
+	background:#273a71;
+	padding:10px;
+	color:#ffff;
+	border:1px transparent;
+	box-sizing:border-box;
+	border-radius:5px;
+	display: block;
+    margin-top: 10px;
+	width:100%;
+}
+.username{
+    display: flex;
+    justify-content: space-between;
+}
+.name-field{
+	width:45%;
+	float:left;
+}
+.email-field{
+	width:45%;
+	float:right;
+}
+.contact-boxes textarea{
+	width:100%;
+	font-size:18px;
+	background:#273a71;
+	padding:10px;
+	color:#ffff;
+	border:1px transparent;
+	box-sizing:border-box;
+	margin-top:23px;
+	border-radius:5px;
+}
+.action{
+	text-align:center;
+}
+.action input{
+	background:#30bae7;
+	padding:10px 60px;
+	font-size:18px;
+	color:#ffff;
+	margin-top:40px;
+	margin-bottom:20px;
+	border-radius:5px;
+	box-shadow:0 4px 0px #299ec5;
+	border:1px solid transparent;
+}
+.action input:hover{
+	background:#299ec5;
+}
 /* Footer Part  */
 .footer{
     display: flex;
@@ -107,8 +233,13 @@ main{
     font-style: normal;
     margin-top: 25px;
 }
-
+/* Footer End  */
+/* Media For Mobile  */
 @media only screen and (max-width: 688px){
+    .header{
+        flex-direction: column;
+        align-items: flex-end;
+    }
     .live{
         width: 100%;
         padding: 50px 0;
@@ -124,15 +255,21 @@ main{
         width: 90%;
         margin-left: 10px;
     }
-    .header{
-        flex-direction: column;
+    .container{
+        padding: 0;
+        margin-top: 80px;
     }
     .players{
         grid-template-columns: repeat(1, 1fr);
     }
-    .container{
-        padding: 0;
-        margin-top: 80px;
+    .portfolio-menu ul li a{
+        margin-left:5px;
+        font-size:14px;
+        padding: 4px 7px;
+    }
+    .action input{
+        padding:5px 30px;
+        font-size:16px;
     }
     .footer img{
         width: 350px;
@@ -140,7 +277,12 @@ main{
         margin-bottom: 25px;
     }
 }
+/* Media for Tablet */
 @media only screen and (min-width:688px) and (max-width:992px) {
+    .header{
+        flex-direction: column;
+        align-items: flex-end;
+    }
     .live{
         width: 100%;
         padding: 80px 20px;
@@ -156,18 +298,16 @@ main{
         width: 90%;
         margin-left: 26px;
     }
-    .header{
-        flex-direction: column;
-    }
-    .players{
-        grid-template-columns: repeat(2, 1fr);
-    }
     .container{
         padding: 0;
         margin-top: 40px;
+    }
+    .players{
+        grid-template-columns: repeat(2, 1fr);
     }
     .footer img{
         width: 350px;
         height: 110px;
         margin-bottom: 25px;
     }
+}
